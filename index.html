@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./style.css ">
+</head>
+
+<body>
+
+    <h1 class="text-center">Tax Calculator</h1>
+
+    <div class="container">
+        <form id="taxForm">
+            <div class="mb-3">
+                <label for="age" class="form-label">Age Group:</label>
+                <select class="form-select" id="age" name="age">
+                    <option value="">Select age</option>
+                    <option value="<40">Age &lt; 40</option>
+                    <option value="40-59">Age ≥ 40 and Age &lt; 60</option>
+                    <option value=">=60">Age ≥ 60</option>
+                </select>
+                <span id="ageError" class="error-message"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="income" class="form-label">Annual Income (in Lakhs):</label>
+                <input type="number" class="form-control" id="income" name="income" placeholder="Enter income" required>
+                <span id="incomeError" class="error-message"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="deductions" class="form-label">Deductions (in Lakhs):</label>
+                <input type="number" class="form-control" id="deductions" name="deductions"
+                    placeholder="Enter deductions" required>
+                <span id="deductionsError" class="error-message"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="extraIncome" class="form-label">Extra Income (in Lakhs):</label>
+                <input type="number" class="form-control" id="extraIncome" name="extraIncome"
+                    placeholder="Enter extra income" required>
+                <span id="extraIncomeError" class="error-message"></span>
+            </div>
+            <div class="button" style="text-align: center;">
+                <button type="button" class="btn btn-primary" onclick="calculateTax()">Calculate Tax</button>
+
+            </div>
+            <!-- <div class="mt-4">
+        <h2>Tax Result:</h2>
+        <textarea id="taxResult" class="form-control" rows="4" readonly></textarea>
+    </div> -->
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
