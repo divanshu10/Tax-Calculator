@@ -28,6 +28,34 @@ form {
 .form-label {
     font-weight: bold;
 }
+/*  */
+label::after {
+    content: "icon";
+    background-image: url(./assets/detailMark1.jpg);
+    color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    display: inline-flex;
+    flex-shrink: 1;
+    margin-left: 3px;
+    font-weight: lighter;
+
+     }
+  
+  label:hover::after,
+  label:focus::after {
+    content: attr(data-desc);
+    background-image: none;
+    padding: 2px 4px;
+    color: rgba(0, 0, 0, 0.918);
+ 
+    /* background-color: rgb(187, 186, 186); */
+    border: 1px solid rgba(128, 128, 128, 0.658);
+    border-radius: 4px;
+    position: absolute;
+     font-size: 14px;
+  }
+/*  */
 
 button {
     margin-top: 10px;

@@ -19,7 +19,7 @@
     <div class="container">
         <form id="taxForm">
             <div class="mb-3">
-                <label for="age" class="form-label">Age Group:</label>
+                <label for="age" data-desc=" In which age group you belongs to."class="form-label">Age Group:</label>
                 <select class="form-select" id="age" name="age">
                     <option value="">Select age</option>
                     <option value="<40">Age &lt; 40</option>
@@ -30,20 +30,20 @@
             </div>
 
             <div class="mb-3">
-                <label for="income" class="form-label">Annual Income (in Lakhs):</label>
+                <label for="income" data-desc=" annual income is total salary before any deductions." class="form-label">Annual Income (in Lakhs):</label>
                 <input type="number" class="form-control" id="income" name="income" placeholder="Enter income" required>
                 <span id="incomeError" class="error-message"></span>
             </div>
 
             <div class="mb-3">
-                <label for="deductions" class="form-label">Deductions (in Lakhs):</label>
+                <label for="deductions" data-desc=" Any deductions under tax redemptions "class="form-label">Deductions (in Lakhs):</label>
                 <input type="number" class="form-control" id="deductions" name="deductions"
                     placeholder="Enter deductions" required>
                 <span id="deductionsError" class="error-message"></span>
             </div>
 
             <div class="mb-3">
-                <label for="extraIncome" class="form-label">Extra Income (in Lakhs):</label>
+                <label for="extraIncome"data-desc="income earn from other methods " class="form-label">Extra Income (in Lakhs):</label>
                 <input type="number" class="form-control" id="extraIncome" name="extraIncome"
                     placeholder="Enter extra income" required>
                 <span id="extraIncomeError" class="error-message"></span>
